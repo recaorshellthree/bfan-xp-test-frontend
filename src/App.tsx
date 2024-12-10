@@ -26,8 +26,7 @@ const App: React.FC = () => {
   };
 
   const handleCreateTask = async () => {
-    if (!newTask.title || !newTask.description)
-      return toast.warning('Fill in all fields');
+    if (!newTask.title) return toast.warning('Fill the title field');
 
     await createTask(newTask);
     setNewTask({ title: '', description: '', done: false });
