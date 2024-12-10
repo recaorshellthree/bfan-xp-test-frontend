@@ -57,6 +57,14 @@ const App: React.FC = () => {
           }
           className="border p-2 mr-2"
         />
+        <label className="mx-4">
+          <input
+            type="checkbox"
+            checked={newTask.done}
+            onChange={(e) => setNewTask({ ...newTask, done: e.target.checked })}
+          />
+          <span className="ml-2">Done</span>
+        </label>
         <button
           onClick={handleCreateTask}
           className="bg-blue-500 text-white p-2"
@@ -74,6 +82,7 @@ const App: React.FC = () => {
             <div>
               <h3 className="font-bold">{task.title}</h3>
               <p>{task.description}</p>
+              <p>{task.done ? 'Completed' : 'Not Completed'}</p>
             </div>
             <button
               onClick={() => handleDeleteTask(task.id)}
