@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Bfan XP Task Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple task management system with a backend built using Laravel and SQLite, and a frontend built using React and TailwindCSS. It allows users to:
 
-## Available Scripts
+- List tasks
+- Create tasks (with a title, description, and a done flag)
+- Delete tasks
 
-In the project directory, you can run:
+The backend provides a REST API for managing tasks, with Swagger OpenAPI documentation included. The frontend consumes these APIs to provide an interactive user interface.
 
-### `yarn start`
+## Backend Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The backend repository can be found at: https://github.com/recaorshellthree/bfan-xp-test-backend?tab=readme-ov-file#bfan-xp-task-management-application-backend-repository
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Frontend Repository
 
-### `yarn test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (>= 20.9.0)
+- yarn
 
-### `yarn build`
+### Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the frontend repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/recaorshellthree/bfan-xp-test-frontend.git
+   cd bfan-xp-test-frontend
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install JavaScript dependencies:
 
-### `yarn eject`
+   ```bash
+   yarn
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Configure the API base URL:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Copy the `.env.example` file to `.env`:
+   - Add the following variable to the `.env` file:
+     ```env
+     REACT_APP_API_URL=http://localhost:8000/api/
+     ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Start the development server:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   yarn start
+   ```
 
-## Learn More
+   The frontend will be available at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Description
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project implements a simple task management system:
+
+- **Frontend**:
+
+  - Built using React and styled with TailwindCSS.
+  - Provides an intuitive interface to interact with the tasks backend.
+  - Fetches tasks from the backend, displays them in a list, and provides options to create and delete tasks.
+
+- **Backend**:
+  - Developed in Laravel and uses SQLite for storage.
+  - Implements a REST API to manage tasks.
+  - Includes Swagger OpenAPI documentation for ease of API consumption.
+
+## Key Features
+
+- **Frontend**:
+  - User-friendly UI with responsive design.
+  - Dynamic task management.
+- **Backend**:
+  - Lightweight and easy to set up with SQLite.
+  - RESTful API with clear documentation.
+
+### Usage
+
+- Use the frontend interface to manage tasks seamlessly.
+- Test the backend API endpoints using Swagger or any API testing tool (like Postman).
+
+---
+
+Feel free to reach out for additional support or customizations.
