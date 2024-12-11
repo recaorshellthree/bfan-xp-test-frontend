@@ -1,5 +1,6 @@
 # Bfan XP Task Management Application
 
+![image](https://github.com/user-attachments/assets/f5abbd3b-6c36-4cae-b8d5-8a06c65211ec)
 This project is a simple task management system with a backend built using Laravel and SQLite, and a frontend built using React and TailwindCSS. It allows users to:
 
 - List tasks
